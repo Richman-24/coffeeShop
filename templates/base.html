@@ -1,0 +1,101 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "main.css" %}">
+    <title>Магазин товаров</title>
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="#" style="color: white;">Главная</a>
+        <a href="#" style="color: white;">О нас</a>
+        <a href="#" style="color: white;">Личный кабинет</a>
+    </nav>
+</header>
+
+<div class="container">
+    <div class="sidebar">
+        <h2>Категории товаров</h2>
+        {% include "includes/categories.html" %}
+    </div>
+
+    <div class="main">
+        <h2>Товары</h2>
+        <div class="product-grid">
+            <div class="product">
+                <img src="https://via.placeholder.com/150" alt="Товар 1">
+                <h3>Товар 1</h3>
+                <p>Цена: 1000 Р</p>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/150" alt="Товар 2">
+                <h3>Товар 2</h3>
+                <p>Цена: 2000 Р</p>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/150" alt="Товар 3">
+                <h3>Товар 3</h3>
+                <p>Цена: 3000 Р</p>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/150" alt="Товар 4">
+                <h3>Товар 4</h3>
+                <p>Цена: 4000 Р</p>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/150" alt="Товар 5">
+                <h3>Товар 5</h3>
+                <p>Цена: 500 Р</p>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/150" alt="Товар 6">
+                <h3>Товар 6</h3>
+                <p>Цена: 1500 Р</p>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/150" alt="Товар 7">
+                <h3>Товар 7</h3>
+                <p>Цена: 2500 Р</p>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/150" alt="Товар 8">
+                <h3>Товар 8</h3>
+                <p>Цена: 3500 Р</p>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/150" alt="Товар 9">
+                <h3>Товар 9</h3>
+                <p>Цена: 4500 Р</p>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/150" alt="Товар 10">
+                <h3>Товар 10</h3>
+                <p>Цена: 5500 Р</p>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/150" alt="Товар 11">
+                <h3>Товар 11</h3>
+                <p>Цена: 6500 Р</p>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/150" alt="Товар 12">
+                <h3>Товар 12</h3>
+                <p>Цена: 7500 Р</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>MyCoffeeShop</p>
+    <p>tel: +7 999 999 99 99</p>
+    <p>telegram: @xxxxxxxy</p>
+</footer>
+
+</body>
+</html>
