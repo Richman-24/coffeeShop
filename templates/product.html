@@ -1,0 +1,57 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Карточка товара</title>
+    <link rel="stylesheet" href="{% static "main.css" %}">
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="base.html" style="color: white;">Главная</a>
+        <a href="#" style="color: white;">О нас</a>
+        <a href="#" style="color: white;">Личный кабинет</a>
+    </nav>
+</header>
+
+<div class="container">
+    <div class="product-image">
+        <img src="{{product.image.url}}">
+    </div>
+    <div class="product-details">
+        <h2>{{product.name}}</h2>
+        <p>Оценка(шаблон): 4.5</p>
+        <p>{{product.description}}</p>
+        <p>Цена: {{product.price}} Р</p>
+        <p>Размер скидки: {{product.discount}}%</p>
+        <button class="favorite-button">Добавить в избранное</button>
+        <button class="cart-button">Добавить в корзину</button>
+    </div>
+</div>
+
+<div class="comments-section">
+    <h3>Комментарии</h3>
+    <div class="comment">
+        <p><strong>Пользователь 1:</strong> Отличный товар!</p>
+    </div>
+    <div class="comment">
+        <p><strong>Пользователь 2:</strong> Очень доволен покупкой.</p>
+    </div>
+    <form class="comment-form">
+        <textarea placeholder="Ваш комментарий" required></textarea>
+        <button type="submit">Отправить</button>
+    </form>
+</div>
+
+<footer>
+    <p>MyCoffeeShop</p>
+    <p>tel: +7 999 999 99 99</p>
+    <p>telegram: @xxxxxxxy</p>
+</footer>
+
+</body>
+</html>
