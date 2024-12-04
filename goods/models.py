@@ -8,13 +8,15 @@ class BaseGoodsModel(models.Model):
     slug = models.SlugField(max_length=86, unique=True, verbose_name="URL")
     is_published = models.BooleanField(default=True, verbose_name="Опубликовано")
 
+    class Meta:
+        abstract = True
+        ordering = ('name',)
 
 class Category(BaseGoodsModel):
-    class Meta:
+    class Meta(BaseGoodsModel.Meta):
         db_table = "category"
         verbose_name = "категория"
         verbose_name_plural = "категории"
-        ordering = ("name",)
 
     def __str__(self) -> str:
         return self.name[:ADMIN_NAME_LIMIT]
@@ -32,18 +34,17 @@ class Product(BaseGoodsModel):
         default=0.00, max_digits=7, decimal_places=2, verbose_name="Скидка в %"
     )
     amount = models.PositiveIntegerField(default=0, verbose_name="Количество")
-    product_category = models.ForeignKey(
+    category = models.ForeignKey(
         to=Category,
         on_delete=models.CASCADE,
         related_name="category",
         verbose_name="Категория",
     )
 
-    class Meta:
+    class Meta(BaseGoodsModel.Meta):
         db_table = "product"
         verbose_name = "продукт"
         verbose_name_plural = "продукты"
-        ordering = ("name",)
 
     def __str__(self) -> str:
         return f"{self.name[:ADMIN_NAME_LIMIT]}, {self.amount}"

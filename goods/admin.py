@@ -15,7 +15,7 @@ class ProductAdmin(admin.ModelAdmin):
     list_display = ["name", "amount", "price", "discount"]
     fields = [
         "name",
-        "product_category",
+        "category",
         "slug",
         "description",
         "image",
