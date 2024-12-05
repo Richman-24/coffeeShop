@@ -1,0 +1,107 @@
+[   
+    {
+        "model": "goods.category",
+        "pk": 1,
+        "fields": {
+            "name": "Бразилия",
+            "slug": "braziliya",
+            "is_published": true
+        }
+    },
+    {
+        "model": "goods.category",
+        "pk": 2,
+        "fields": {
+            "name": "Россия",
+            "slug": "rossiya",
+            "is_published": true
+        }
+    },
+    {
+        "model": "goods.category",
+        "pk": 3,
+        "fields": {
+            "name": "Колумбия",
+            "slug": "kolumbiya",
+            "is_published": true
+        }
+    },
+    {
+        "model": "goods.category",
+        "pk": 4,
+        "fields": {
+            "name": "Кения",
+            "slug": "keniya",
+            "is_published": true
+        }
+    },
+    {
+        "model": "goods.category",
+        "pk": 5,
+        "fields": {
+            "name": "Эфиопия",
+            "slug": "efiopiya",
+            "is_published": true
+        }
+    },
+    {
+        "model": "goods.product",
+        "pk": 1,
+        "fields": {
+            "name": "Амина",
+            "slug": "amina",
+            "is_published": true,
+            "description": "Лучший, чёрный, крепкий, горячий - для настоящих ценителей.",
+            "image": "goods_images/amina_1.jpeg",
+            "price": "5000.0000",
+            "discount": "10.00",
+            "amount": 5,
+            "category": 1
+        }
+    },
+    {
+        "model": "goods.product",
+        "pk": 2,
+        "fields": {
+            "name": "Женевьев",
+            "slug": "zhenevev",
+            "is_published": true,
+            "description": "Утончённый букет и насыщенный аромат",
+            "image": "goods_images/jene_1.jpeg",
+            "price": "4500.0000",
+            "discount": "5.00",
+            "amount": 2,
+            "category": 1
+        }
+    },
+    {
+        "model": "goods.product",
+        "pk": 3,
+        "fields": {
+            "name": "Асана",
+            "slug": "asana",
+            "is_published": true,
+            "description": "Продукт солнечной бразилии. Подарит истинное наслаждение.",
+            "image": "goods_images/asana_1.jpeg",
+            "price": "3700.0000",
+            "discount": "3.00",
+            "amount": 7,
+            "category": 1
+        }
+    },
+    {
+        "model": "goods.product",
+        "pk": 4,
+        "fields": {
+            "name": "Маша",
+            "slug": "masha",
+            "is_published": true,
+            "description": "Отечественная прожарка.",
+            "image": "goods_images/masha_1.jpeg",
+            "price": "7000.0000",
+            "discount": "5.00",
+            "amount": 1,
+            "category": 2
+        }
+    }
+]

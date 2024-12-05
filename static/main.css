@@ -130,3 +130,46 @@ footer {
 .comment-form button:hover {
     background-color: #0056b3;
 }
+
+.pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.pagination-list {
+    list-style: none;
+    padding: 0;
+}
+
+.page-item {
+    display: inline;
+    margin: 0 5px;
+}
+
+.page-link {
+    text-decoration: none;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+}
+
+.page-link:hover {
+    background-color: #0056b3;
+}
+
+.active .page-link {
+    background-color: #0056b3;
+    cursor: default;
+}
+
+.product a {
+    text-decoration: none; /* Убирает подчеркивание */
+    color: inherit; /* Устанавливает цвет текста как у родителя */
+}
+
+.product:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Добавляет тень при наведении */
+    transform: scale(1.02); /* Увеличивает карточку при наведении */
+    transition: transform 0.2s, box-shadow 0.2s; /* Плавный переход */
+}

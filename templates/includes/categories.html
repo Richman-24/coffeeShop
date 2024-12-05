@@ -3,6 +3,6 @@
 
 {% for item in categories %}
   <div class="category">
-    {{ item.name }}
+    <a href="{% url "catalog:index" item.slug%}">{{item.name}}</a>
   </div>
 {% endfor %}
