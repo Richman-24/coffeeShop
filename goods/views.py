@@ -8,7 +8,7 @@ from goods.models import Category, Product
 
 
 class CatalogView(ListView):
-    template_name = "base.html"
+    template_name = "goods/catalog.html"
     paginate_by = 3
     context_object_name = "products"
     model = Product
@@ -16,7 +16,7 @@ class CatalogView(ListView):
     def get_queryset(self) -> QuerySet[Any]:
         category_slug = self.kwargs.get("category_slug")
 
-        if category_slug == 'all':
+        if category_slug == 'all' or category_slug is None:
             queryset = super().get_queryset()
         else:
             queryset = super().get_queryset().filter(category__slug=category_slug)
@@ -27,7 +27,6 @@ class CatalogView(ListView):
         context = super().get_context_data(**kwargs)
         context["categories"] = Category.objects.all()
         context["slug_url"] = self.kwargs.get("category_slug")
-#        print(f"context= {context}", sep='\n')
         return context
 
 

@@ -1,8 +1,5 @@
-{% load static %}
-
-
 {% for item in categories %}
   <div class="category">
-    <a href="{% url "catalog:index" item.slug%}">{{item.name}}</a>
+    <a href="{% url "goods:catalog" item.slug%}">{{item.name}}</a>
   </div>
 {% endfor %}

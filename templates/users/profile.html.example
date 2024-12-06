@@ -1,0 +1,65 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профиль пользователя</title>
+    <link rel="stylesheet" href="{% static "main.css" %}">
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="base.html" style="color: white;">Главная</a>
+        <a href="#" style="color: white;">О нас</a>
+        <a href="#" style="color: white;">Личный кабинет</a>
+    </nav>
+</header>
+
+<div class="profile-container">
+    <div class="avatar">
+        <img src="{% static "masha_1.jpeg" %}" alt="Аватар пользователя">
+    </div>
+    <h2>Маша Иванова</h2>
+    <p>Дата рождения: 14/02/1992</p>
+    <p>Электронная почта: user@example.com</p>
+
+    <h3>История покупок</h3>
+    <table class="purchase-history">
+        <thead>
+            <tr>
+                <th>Дата</th>
+                <th>Номер заказа</th>
+                <th>Статус</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>01/01/2023</td>
+                <td>123456</td>
+                <td>Получено</td>
+            </tr>
+            <tr>
+                <td>15/02/2023</td>
+                <td>654321</td>
+                <td>Получено</td>
+            </tr>
+            <tr>
+                <td>30/03/2023</td>
+                <td>789012</td>
+                <td>Получено</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<footer>
+    <p>MyCoffeeShop</p>
+    <p>tel: +7 999 999 99 99</p>
+    <p>telegram: @xxxxxxxy</p>
+</footer>
+
+</body>
+</html>

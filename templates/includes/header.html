@@ -1,7 +1,7 @@
 <header>
     <nav>
-        <a href="{% url "catalog:index" "all"%}" style="color: white;">Главная</a>
+        <a href="{% url "goods:index"%}" style="color: white;">Главная</a>
         <a href="#" style="color: white;">О нас</a>
-        <a href="#" style="color: white;">Личный кабинет</a>
+        <a href="{% url "users:profile" %}" style="color: white;">Личный кабинет</a>
     </nav>
 </header>
